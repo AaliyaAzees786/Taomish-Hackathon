@@ -1,0 +1,42 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Trade ID</th>
+        <th>Trade Date</th>
+        <th>Counterparty Code</th>
+        <th>Buy/Sell</th>
+        <th>Commodity</th>
+        <th>Grade</th>
+        <th>Contract Term</th>
+        <th>Period Start Date</th>
+        <th>Period End Date</th>
+        <th>Incoterm</th>
+        <th>Load Location</th>
+        <th>Unload Location</th>
+        <th>Price Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let trade of trades">
+        <td><a href="#">{{ trade.tradeId }}</a></td>
+        <td>{{ trade.tradeDate }}</td>
+        <td>{{ trade.counterpartyCode }}</td>
+        <td>
+          <span [class.buy]="trade.buySell === 'BUY'" [class.sell]="trade.buySell === 'SELL'">
+            {{ trade.buySell }}
+          </span>
+        </td>
+        <td>{{ trade.commodity }}</td>
+        <td>{{ trade.grade }}</td>
+        <td>{{ trade.contractTerm }}</td>
+        <td>{{ trade.periodStartDate }}</td>
+        <td>{{ trade.periodEndDate }}</td>
+        <td>{{ trade.incoterm }}</td>
+        <td>{{ trade.loadLocation }}</td>
+        <td>{{ trade.unloadLocation }}</td>
+        <td>{{ trade.priceType }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

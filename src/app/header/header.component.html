@@ -1,0 +1,18 @@
+
+<header class="page-header">
+  <h1>
+    Physical Trade
+    <span class="info-icon" tabindex="0" (click)="toggleInfoPopup()">
+      <i class="fas fa-info-circle"></i>
+    </span>
+  </h1>
+</header>
+
+<div id="infoPopup" class="popup" *ngIf="showPopup" (click)="closePopup($event)">
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <span class="close-btn" (click)="toggleInfoPopup()">&times;</span>
+    <strong>Physical Trade</strong>
+    <p>The user can create a trade through the Physical Trade screen for the respective purchase and sales. The Trade screen has three tabs – Draft, Confirmed and Void.</p>
+  </div>
+</div>
+

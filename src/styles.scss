@@ -1,0 +1,87 @@
+::ng-deep .mat-tooltip {
+  background-color: black !important;
+  color: white !important;
+  opacity: 1 !important;
+  z-index: 10000 !important;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.custom-tooltip-panel {
+  z-index: 10000 !important;
+}
+
+.cdk-overlay-container {
+  z-index: 10000;
+}
+
+.cdk-overlay-pane {
+  pointer-events: auto;
+}
+
+.table-container table td {
+  position: relative;
+  cursor: default;
+}
+
+.table-container table td:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+/* Add this to your styles.scss file */
+
+/* Simple custom tooltip styles */
+.simple-custom-tooltip {
+  background-color: rgba(50, 50, 50, 0.95);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+  white-space: nowrap;
+  z-index: 10000;
+  pointer-events: auto;
+  backdrop-filter: blur(4px);
+}
+
+.simple-custom-tooltip .tooltip-text {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.simple-custom-tooltip .copy-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+}
+
+.simple-custom-tooltip .copy-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.simple-custom-tooltip .copy-btn:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Additional table styles for better tooltip interaction */
+.table-container table td {
+  position: relative;
+  cursor: default;
+}
+
+.table-container table td:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}

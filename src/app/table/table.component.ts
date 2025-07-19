@@ -1,10 +1,12 @@
+// table.component.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // Needed for *ngFor
+import { CommonModule } from '@angular/common';
+import { SimpleTooltipDirective } from '../custom-tooltip-content';
 
 @Component({
   selector: 'app-table',
   standalone: true,
-  imports: [CommonModule], // Required!
+  imports: [CommonModule, SimpleTooltipDirective],
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
@@ -42,6 +44,18 @@ export class TableComponent {
     },
     {
       tradeId: 'DRAFT/5739',
+      tradeDate: '17/07/2025',
+      counterpartyCode: 'TBD',
+      buySell: 'SELL',
+      commodity: 'Palm Oil',
+      grade: 'A1',
+      contractTerm: 'Short',
+      periodStartDate: '20/07/2025',
+      periodEndDate: '25/07/2025',
+      incoterm: 'CIF',
+      loadLocation: 'KANDLA',
+      unloadLocation: 'MUMBAI',
+      priceType: 'Floating'
     }
-  ]
+  ];
 }

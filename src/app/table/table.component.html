@@ -19,23 +19,23 @@
     </thead>
     <tbody>
       <tr *ngFor="let trade of trades">
-        <td><a href="#">{{ trade.tradeId }}</a></td>
-        <td>{{ trade.tradeDate }}</td>
-        <td>{{ trade.counterpartyCode }}</td>
-        <td>
+        <td><a href="#" [simpleTooltip]="trade.tradeId">{{ trade.tradeId }}</a></td>
+        <td [simpleTooltip]="trade.tradeDate">{{ trade.tradeDate }}</td>
+        <td [simpleTooltip]="trade.counterpartyCode">{{ trade.counterpartyCode }}</td>
+        <td [simpleTooltip]="trade.buySell">
           <span [class.buy]="trade.buySell === 'BUY'" [class.sell]="trade.buySell === 'SELL'">
             {{ trade.buySell }}
           </span>
         </td>
-        <td>{{ trade.commodity }}</td>
-        <td>{{ trade.grade }}</td>
-        <td>{{ trade.contractTerm }}</td>
-        <td>{{ trade.periodStartDate }}</td>
-        <td>{{ trade.periodEndDate }}</td>
-        <td>{{ trade.incoterm }}</td>
-        <td>{{ trade.loadLocation }}</td>
-        <td>{{ trade.unloadLocation }}</td>
-        <td>{{ trade.priceType }}</td>
+        <td [simpleTooltip]="trade.commodity">{{ trade.commodity }}</td>
+        <td [simpleTooltip]="trade.grade">{{ trade.grade }}</td>
+        <td [simpleTooltip]="trade.contractTerm">{{ trade.contractTerm }}</td>
+        <td [simpleTooltip]="trade.periodStartDate">{{ trade.periodStartDate }}</td>
+        <td [simpleTooltip]="trade.periodEndDate">{{ trade.periodEndDate }}</td>
+        <td [simpleTooltip]="trade.incoterm">{{ trade.incoterm }}</td>
+        <td [simpleTooltip]="trade.loadLocation">{{ trade.loadLocation }}</td>
+        <td [simpleTooltip]="trade.unloadLocation">{{ trade.unloadLocation }}</td>
+        <td [simpleTooltip]="trade.priceType">{{ trade.priceType }}</td>
       </tr>
     </tbody>
   </table>

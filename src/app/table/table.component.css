@@ -7,6 +7,7 @@
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    table-layout: fixed; /* Forces fixed column widths */
   }
 
   th, td {
@@ -14,6 +15,10 @@
     border: 1px solid #ccc;
     text-align: left;
     white-space: nowrap;
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ... for truncated text */
+    width: auto; /* Let columns distribute evenly */
+    max-width: 150px; /* Set maximum column width */
   }
 
   th {
@@ -42,6 +47,19 @@
     font-weight: bold;
   }
 }
+
+/* Optional: Specific column width control */
+.table-container th:nth-child(1),
+.table-container td:nth-child(1) {
+  width: 100px; /* Adjust as needed */
+}
+
+.table-container th:nth-child(2),
+.table-container td:nth-child(2) {
+  width: 120px; /* Adjust as needed */
+}
+
+/* Continue for other columns as needed */
 
 /* Optional tooltip override for non-menu tooltips */
 ::ng-deep .mat-tooltip {
